@@ -6,6 +6,7 @@ while True:
 	if name == 'q': #quit the input
 		break
 	price = input('Please input the product price: ')
+	price = int(price)
 	p = []
 	p.append(name)
 	p.append(price)
@@ -22,4 +23,9 @@ for product in products:
 
 with open('products.txt', 'w') as f:
 	for p in products:
-		f.write(p[0] + ',' + p[1] + '\n')
+		f.write(p[0] + ',' + str(p[1]) + '\n')
+
+with open('products.csv', 'w') as f: #csv file could be opened by excel, and the data is commonly separately by ','
+	f.write('Product name' + ',' + 'Product price' + '\n')
+	for p in products:
+		f.write(p[0] + ',' + str(p[1]) + '\n') 
