@@ -25,7 +25,7 @@ with open('products.txt', 'w') as f:
 	for p in products:
 		f.write(p[0] + ',' + str(p[1]) + '\n')
 
-with open('products.csv', 'w') as f: #csv file could be opened by excel, and the data is commonly separately by ','
+with open('products.csv', 'w', encoding='utf-8') as f: #csv file could be opened by excel, and the data is commonly separately by ','
 	f.write('Product name' + ',' + 'Product price' + '\n')
 	for p in products:
 		f.write(p[0] + ',' + str(p[1]) + '\n') 
