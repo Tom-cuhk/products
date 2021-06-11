@@ -14,3 +14,7 @@ while True:
 
 print(products)
 # print(products[0][0])
+
+for product in products:
+	print(product)
+	print('The price of ', product[0], 'is ', product[1] )
