@@ -18,3 +18,8 @@ print(products)
 for product in products:
 	print(product)
 	print('The price of ', product[0], 'is ', product[1] )
+
+
+with open('products.txt', 'w') as f:
+	for p in products:
+		f.write(p[0] + ',' + p[1] + '\n')
