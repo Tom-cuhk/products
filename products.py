@@ -1,5 +1,14 @@
 
 products = []
+
+with open('products.csv', 'r', encoding='utf-8') as f:
+	for line in f:
+		if "Product name" in line:
+			continue
+		s = line.strip().split(',')
+		products.append(s)
+print(products)
+
 while True:
 	name = input('Please input the product name: ')
 	print('Press q to quit the input')
